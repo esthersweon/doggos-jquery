@@ -2,6 +2,8 @@
 
 Let's display some doggos using JavaScript iterators and JQuery!
 
+![so many puppies](https://www.reactiongifs.us/wp-content/uploads/2018/02/giphy-downsized.gif)
+
 ## Steps
 1. Fork and clone this repo.
 1. Make sure your CSS and JavaScript is linked appropriately to your HTML file.
