@@ -82,8 +82,9 @@ $(document).ready(function() {
 
 
 
-    // STEP 3: Map through allTheDoggos to get just their names and doggo ages (doggo age = human years * 7);
-    // Then, iterate through this array and append the doggo's name and doggo age to the appropriate div
+    // STEP 3: .map() through allTheDoggos to return an array of doggo Objects with names and doggo ages (doggo age = human years * 7);
+    // e.g. [{ name: Petunia, doggoAge: 7 }, etc.]
+    // Then, iterate through this array and append the doggo's name and doggo age to the <ul></ul> inside <div id="doggo-ages"></div>
     var doggoNamesAndDoggoAges = [];
     doggoNamesAndDoggoAges.forEach();
 
