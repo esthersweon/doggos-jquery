@@ -47,33 +47,88 @@ $(document).ready(function() {
     // STEP 0: Define the different arrays of doggos you will display
 
     // Filter allTheDoggos for just the puppies (< 2 years)
-    // var allPuppies = write code here 
+    var allPuppies = allTheDoggos.filter(function(doggo) {
+        return doggo.age < 2
+    });
 
     // Filter allTheDoggos for those whose names start with P 
-    // var doggosWithPNames = write code here 
+    var doggosWithPNames = allTheDoggos.filter(function(doggo) {
+        return doggo.name[0] === 'P'
+    });
 
     // Filter allTheDoggos for those in SF
-    // var doggosInSf = write code here 
+    var doggosInSf = allTheDoggos.filter(function(doggo) {
+        return doggo.city === 'SF'
+    });
 
     // Filter allTheDoggos for those over 7 years old
-    // var seniorDoggos = write code here 
+    var seniorDoggos = allTheDoggos.filter(function(doggo) {
+        return doggo.age > 7
+    });
 
     // Filter allTheDoggos for those in CA
-    // var californiaDoggos = write code here 
+    var californiaDoggos = allTheDoggos.filter(function(doggo) {
+        return doggo.state === 'CA'
+    });
 
 
 
     // STEP 1: Figure out which div each array of doggos should be appended to in the index.html;
     // Then, iterate through each array and append the doggo's name and photo to that div
-    allPuppies.forEach();
+    allPuppies.forEach(function(doggo) {
+        $('#puppies').append(`
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="${ doggo.photo }" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">${ doggo.name }</h5>
+              </div>
+            </div>
+        `)
+    });
 
-    doggosWithPNames.forEach();
+    doggosWithPNames.forEach(function(doggo) {
+        $('#p-name').append(`
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="${ doggo.photo }" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">${ doggo.name }</h5>
+              </div>
+            </div>
+        `)
+    });
 
-    doggosInSf.forEach();
+    doggosInSf.forEach(function(doggo) {
+        $('#sf').append(`
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="${ doggo.photo }" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">${ doggo.name }</h5>
+              </div>
+            </div>
+        `)
+    });
 
-    seniorDoggos.forEach();
+    seniorDoggos.forEach(function(doggo) {
+        $('#senior').append(`
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="${ doggo.photo }" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">${ doggo.name }</h5>
+              </div>
+            </div>
+        `)
+    });
 
-    californiaDoggos.forEach();
+    californiaDoggos.forEach(function(doggo) {
+        $('#ca').append(`
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="${ doggo.photo }" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">${ doggo.name }</h5>
+              </div>
+            </div>
+        `)
+    });
 
 
 
@@ -85,8 +140,20 @@ $(document).ready(function() {
     // STEP 3: .map() through allTheDoggos to return an array of doggo Objects with names and doggo ages (doggo age = human years * 7);
     // e.g. [{ name: Petunia, doggoAge: 7 }, etc.]
     // Then, iterate through this array and append the doggo's name and doggo age to the <ul></ul> inside <div id="doggo-ages"></div>
-    var doggoNamesAndDoggoAges = [];
-    doggoNamesAndDoggoAges.forEach();
+    var doggoNamesAndDoggoAges = allTheDoggos.map(function(doggo) {
+        return {
+            name: doggo.name, 
+            doggoAge: doggo.age * 7
+        }
+    });
+
+    doggoNamesAndDoggoAges.forEach(function(doggo) {
+        $('#doggo-ages ul').append(`
+            <li>
+              ${ doggo.name } - ${ doggo.doggoAge } doggo years old
+            </li>
+        `)
+    });
 
 
 
