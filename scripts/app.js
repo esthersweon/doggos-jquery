@@ -73,5 +73,11 @@ $(document).ready(function() {
     // Check out https://getbootstrap.com/docs/4.0/components/card/
 
 
+    // 3. Map through allTheDoggos to get just their names and doggo ages (doggo age = human years * 7);
+    // Then, iterate through this array and append the doggo's name and doggo age to the appropriate div
+    var doggoNamesAndDoggoAges = [];
+    doggoNamesAndDoggoAges.forEach();
+
+
     // BONUS: DRY up your code!
 });

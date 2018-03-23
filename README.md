@@ -1,6 +1,6 @@
 # Doggos with JQuery
 
-Let's display some doggos with JQuery!
+Let's display some doggos using JavaScript iterators and JQuery!
 
 ## Steps
 1. Fork and clone this repo.
