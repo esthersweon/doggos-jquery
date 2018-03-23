@@ -76,58 +76,23 @@ $(document).ready(function() {
     // STEP 1: Figure out which div each array of doggos should be appended to in the index.html;
     // Then, iterate through each array and append the doggo's name and photo to that div
     allPuppies.forEach(function(doggo) {
-        $('#puppies').append(`
-            <div class="card" style="width: 18rem;">
-              <img class="card-img-top" src="${ doggo.photo }" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">${ doggo.name }</h5>
-              </div>
-            </div>
-        `)
+        appendDoggoCardToDiv(doggo, '#puppies');
     });
 
     doggosWithPNames.forEach(function(doggo) {
-        $('#p-name').append(`
-            <div class="card" style="width: 18rem;">
-              <img class="card-img-top" src="${ doggo.photo }" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">${ doggo.name }</h5>
-              </div>
-            </div>
-        `)
+        appendDoggoCardToDiv(doggo, '#p-name');
     });
 
     doggosInSf.forEach(function(doggo) {
-        $('#sf').append(`
-            <div class="card" style="width: 18rem;">
-              <img class="card-img-top" src="${ doggo.photo }" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">${ doggo.name }</h5>
-              </div>
-            </div>
-        `)
+        appendDoggoCardToDiv(doggo, '#sf');
     });
 
     seniorDoggos.forEach(function(doggo) {
-        $('#senior').append(`
-            <div class="card" style="width: 18rem;">
-              <img class="card-img-top" src="${ doggo.photo }" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">${ doggo.name }</h5>
-              </div>
-            </div>
-        `)
+        appendDoggoCardToDiv(doggo, '#senior');
     });
 
     californiaDoggos.forEach(function(doggo) {
-        $('#ca').append(`
-            <div class="card" style="width: 18rem;">
-              <img class="card-img-top" src="${ doggo.photo }" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">${ doggo.name }</h5>
-              </div>
-            </div>
-        `)
+        appendDoggoCardToDiv(doggo, '#ca');
     });
 
 
@@ -158,4 +123,14 @@ $(document).ready(function() {
 
 
     // BONUS: DRY up your code!
+    function appendDoggoCardToDiv(doggo, selector) {
+        $(selector).append(`
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="${ doggo.photo }" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">${ doggo.name }</h5>
+              </div>
+            </div>
+        `);
+    }
 });
