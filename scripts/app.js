@@ -44,17 +44,30 @@ $(document).ready(function() {
         }
     ];
 
+    // 0. Get the different groups of doggos you will display
     var allPuppies = []; // filter allTheDoggos for just the puppies (< 2 years)
 
-    var doggosWithPNames = []; // fillter allTheDoggos for those whose names start with P 
+    var doggosWithPNames = []; // filter allTheDoggos for those whose names start with P 
 
-    var doggosInSf = []; // etc
+    var doggosInSf = []; // filter allTheDoggos for those in SF
 
-    var seniorDoggos = []; // etc
+    var seniorDoggos = []; // filter allTheDoggos for those over 7 years old
 
-    var californiaDoggos = []; // etc
+    var californiaDoggos = []; // filter allTheDoggos for those in CA
 
-    // 1. Figure out where each array of doggos should be displayed in the index.html
-    // 2. Iterate through each array and append the doggo's name and photo to the HTML
-    // 3. Use Bootstrap to style these dogs (Check out Bootstrap cards: https://getbootstrap.com/docs/4.0/components/card/)
+
+    // 1. Figure out which div each array of doggos should be appended to in the index.html;
+    // Then, iterate through each array and append the doggo's name and photo to that div
+    allPuppies.forEach();
+
+    doggosWithPNames.forEach();
+
+    doggosInSf.forEach();
+
+    seniorDoggos.forEach();
+
+    californiaDoggos.forEach();
+
+    // 2. Use Bootstrap cards to style these doggos;
+    // Check out https://getbootstrap.com/docs/4.0/components/card/
 });
