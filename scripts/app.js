@@ -44,19 +44,26 @@ $(document).ready(function() {
         }
     ];
 
-    // 0. Define the different arrays of doggos you will display
-    var allPuppies = []; // filter allTheDoggos for just the puppies (< 2 years)
+    // STEP 0: Define the different arrays of doggos you will display
 
-    var doggosWithPNames = []; // filter allTheDoggos for those whose names start with P 
+    // Filter allTheDoggos for just the puppies (< 2 years)
+    // var allPuppies = write code here 
 
-    var doggosInSf = []; // filter allTheDoggos for those in SF
+    // Filter allTheDoggos for those whose names start with P 
+    // var doggosWithPNames = write code here 
 
-    var seniorDoggos = []; // filter allTheDoggos for those over 7 years old
+    // Filter allTheDoggos for those in SF
+    // var doggosInSf = write code here 
 
-    var californiaDoggos = []; // filter allTheDoggos for those in CA
+    // Filter allTheDoggos for those over 7 years old
+    // var seniorDoggos = write code here 
+
+    // Filter allTheDoggos for those in CA
+    // var californiaDoggos = write code here 
 
 
-    // 1. Figure out which div each array of doggos should be appended to in the index.html;
+
+    // STEP 1: Figure out which div each array of doggos should be appended to in the index.html;
     // Then, iterate through each array and append the doggo's name and photo to that div
     allPuppies.forEach();
 
@@ -69,14 +76,17 @@ $(document).ready(function() {
     californiaDoggos.forEach();
 
 
-    // 2. Use Bootstrap cards to style these doggos;
+
+    // STEP 2: Use Bootstrap cards to style these doggos;
     // Check out https://getbootstrap.com/docs/4.0/components/card/
 
 
-    // 3. Map through allTheDoggos to get just their names and doggo ages (doggo age = human years * 7);
+
+    // STEP 3: Map through allTheDoggos to get just their names and doggo ages (doggo age = human years * 7);
     // Then, iterate through this array and append the doggo's name and doggo age to the appropriate div
     var doggoNamesAndDoggoAges = [];
     doggoNamesAndDoggoAges.forEach();
+
 
 
     // BONUS: DRY up your code!
