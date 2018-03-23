@@ -44,7 +44,7 @@ $(document).ready(function() {
         }
     ];
 
-    // 0. Get the different groups of doggos you will display
+    // 0. Define the different arrays of doggos you will display
     var allPuppies = []; // filter allTheDoggos for just the puppies (< 2 years)
 
     var doggosWithPNames = []; // filter allTheDoggos for those whose names start with P 
@@ -68,6 +68,10 @@ $(document).ready(function() {
 
     californiaDoggos.forEach();
 
+
     // 2. Use Bootstrap cards to style these doggos;
     // Check out https://getbootstrap.com/docs/4.0/components/card/
+
+
+    // BONUS: DRY up your code!
 });
