@@ -1,8 +1,7 @@
-div {
+#puppies, #p-name, #sf, #senior, #ca {
     display: flex;
 }
 
 img {
     height: 200px;
-    max-width: 600px;
 }
